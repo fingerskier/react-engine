@@ -23,7 +23,7 @@ import Engine from "___";
 
 Then, setup your main component's body like so:
 
-```
+```jsx
   <Engine
     style={{
       width: 800,
@@ -46,7 +46,7 @@ Then, setup your main component's body like so:
   
 This is what the `MoveBox` declaration looks like:
 
-```
+```jsx
 const MoveBox = (entities, {input})=>{
   const {payload} = input.find(x=>x.name==='onMouseDown') || {}
 
@@ -60,7 +60,6 @@ const MoveBox = (entities, {input})=>{
   return entities
 }
 
-
 export default MoveBox
 ```
 
@@ -68,7 +67,7 @@ It watches for the `onMouseDown` event and sets the coordinates of `box1` to mat
 Every system function recieves two parameters: `game-state` and `engine-state`.
 `game-state` is an object containing all the entities.
 `engine-state` is an object thusly set:
-```
+```jsx
 {
   input: <array of current events>,
   window: <...>,
@@ -79,13 +78,14 @@ Every system function recieves two parameters: `game-state` and `engine-state`.
     delta: <Integer>,
     previousDelta: <Integer>,
   }
+}
 ```
 ...`dispatch`ed events evaporate after the current cycle
   
   
 The `Box` renderer is a usual React component:
 
-```
+```js
 function Box({ size=100, x=250, y=150 }) {
   const thisX = x - size/2
   const thisY = y - size/2
@@ -110,6 +110,15 @@ Note that entities do not have to render something, they can be just data and fu
   
   
 Build and run: each entity is a **"box"**. Every time you click on the screen, the first entity will move to the clicked coordinate.
+
+
+## Futherance
+
+You can go much further than this.
+e.g. You can use a custom renderer to integreate with three.js
+e.g. Using `onEvent` you may integrate a sound player, reading `dispatch`ed events
+e.g. Add HTML children withn the `Engine` to incorporate a HUD.
+e.e. Multiple `Engine` components for serially awesome experiences.
 
 
 ## Engine Properties
