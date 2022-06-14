@@ -1,40 +1,8 @@
-<p align="center">
-  <img src="https://raw.githubusercontent.com/bberak/react-game-engine/master/logo.png" alt="React Game Engine" height="120" />
-</p>
+# Borrowed heavily from: [React-Game-Engine](https://github.com/bberak/react-game-engine)
 
-# React Game Engine &middot; [![npm version](https://badge.fury.io/js/react-game-engine.svg)](https://badge.fury.io/js/react-game-engine) [![mit license](https://img.shields.io/badge/license-MIT-50CB22.svg)](https://opensource.org/licenses/MIT)
 
-Some components that make it easier to construct dynamic and interactive scenes on the **web** using React. 
+Single component to make it easier to construct dynamic and interactive scenes using React[web].
 
-If you are looking for the **React Native** version of this library, go to [react-native-game-engine](https://github.com/bberak/react-native-game-engine).
-
-## Differences between React Native Game Engine
-
-The core APIs are exactly the same. I've made some simplifications and improvements where it made sense. Please note that this library is still a bit more **experimental** than RNGE, but definitely in a usable state.
-
-The main changes are:
-
-### Rx Dependency Removed
-
-I've removed the Rx dependency, and therefore the ability to pass in your own touch processor. For most developers, they won't even notice this change. The number and variety of events that you can receive from a DOM element is vastly bigger than on mobile. The burden of normalizing these events into streams that are consumable by the game developer in every possible way is quite daunting and would undoubtedly lead to developers pulling out their hair.
-
-### Touches Replaced By Input
-
-Taking the above into account - the `touches` array has been replaced by a generic `input`. Every system will receive an `input` array that contain the name and payload of the following events: `onClick onContextMenu onDoubleClick onDrag onDragEnd onDragEnter onDragExit onDragLeave onDragOver onDragStart onDrop onMouseDown onMouseEnter onMouseLeave onMouseMove onMouseOut onMouseOver onMouseUp onWheel onTouchCancel onTouchEnd onTouchMove onTouchStart onKeyDown onKeyPress onKeyUp`
-
-Here's a system that would handle these events:
-
-```javascript
-const sys1 = (entities, { input }) => {
-  const { payload } = input.find(x => x.name === "onMouseDown") || {};
-
-  if (payload) {
-    //-- Do something here
-  }
-
-  return entities;
-};
-```
 
 ## Table of Contents
 
