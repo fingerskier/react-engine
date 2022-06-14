@@ -2,21 +2,8 @@
 
 
 Single component to make it easier to construct dynamic and interactive scenes using React[web].
-
-
-## Table of Contents
-
-- [Quick Start](#quick-start)
-- [GameEngine Properties](#gameengine-properties)
-- [GameEngine Methods](#gameengine-methods)
-- [FAQ](#faq)
-- [Introduction](#introduction)
-- [Managing Complexity with Component Entity Systems](#managing-complexity-with-component-entity-systems)
-  - [Additional CES Reading Material](#additional-ces-reading-material)
-- [Get in Touch](#get-in-touch)
-- [License](#license)
-
-
+  
+  
 ## Addenda
 
 There is a **react-game-engine** template that illuminates both the core concepts and integration with 3D, sound, physics, spritesheets, etc.;  take a look at [react-game-engine-template](https://github.com/bberak/react-game-engine-template).
