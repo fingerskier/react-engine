@@ -1,7 +1,7 @@
 {
-  "name": "react-game-engine",
-  "version": "1.1.0",
-  "description": "A lightweight game engine for React projects",
+  "name": "react-engine",
+  "version": "1.0.0",
+  "description": "A lightweight interactivity engine for React applications",
   "main": "build/index.js",
   "scripts": {
     "test": "jest",
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bberak/react-game-engine.git"
+    "url": "git+https://github.com/fingerskier/react-engine.git"
   },
   "keywords": [
     "React",
@@ -26,9 +26,9 @@
   "author": "Boris Berak",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/bberak/react-game-engine/issues"
+    "url": "https://github.com/fingerskier/react-engine/issues"
   },
-  "homepage": "https://github.com/bberak/react-game-engine",
+  "homepage": "https://github.com/fingerskier/react-engine",
   "peerDependencies": {
     "react": ">= 16.3.0"
   },

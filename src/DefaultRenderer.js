@@ -18,6 +18,6 @@ export default (entities, window) => {
 			else if (typeof entity.renderer === "function")
 				return (
 					<entity.renderer key={key} window={window} {...entity} />
-				);
-		});
-};
+				)
+		})
+}
