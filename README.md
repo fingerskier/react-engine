@@ -1,4 +1,4 @@
-# Borrowed heavily from: [React-Game-Engine](https://github.com/bberak/react-game-engine)
+# Derived from: [React-Game-Engine](https://github.com/bberak/react-game-engine)
 
 
 Single component to make it easier to construct dynamic and interactive scenes using React[web].
@@ -51,6 +51,7 @@ Then, setup your main component's body like so:
     }}
   ></Engine>
 ```
+...you can [theoretically] have multiple `Engine` components at once.  Whether that's performant or not is another question...
   
   
 `MoveBox` is a function.  `systems` is a an array of functions.  These get called on each cycle.
@@ -140,3 +141,14 @@ Build and run: each entity is a **"box"**. Every time you click on the screen, t
 
 ## FAQ
 
+### Why?
+
+Because not all problems lend themselves to the static-document-model solution.
+Yet, the DOM is far more powerful and capable than how we typically use: for electronic brochures with dynamic tweaks here and there.  
+  
+The base notion of this `Engine` is that of a cycle; much like an embedded controller cycles to read and write I/O, and a game-engine loops to get input and draw output.  This allows us compartmentalize our user interface solution into input (systems, handlers) and output (renderers, network).
+  
+  
+### Is it perfect?
+
+Yes.  Perfectly unique.  Just like you- and everyone else.
